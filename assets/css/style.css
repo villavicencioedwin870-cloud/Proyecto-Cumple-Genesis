@@ -1,0 +1,1683 @@
+/* ===================================
+   NUESTRO UNIVERSO
+   Estilos Base
+=================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+    background:#040714;
+    color:#fff;
+    overflow-x:hidden;
+
+}
+
+/* Loader */
+
+#loader{
+
+    position:fixed;
+    inset:0;
+    background:#040714;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+    transition:1s;
+
+}
+
+.loader-box{
+
+    text-align:center;
+
+}
+
+.loader-box h1{
+
+    font-family:'Great Vibes',cursive;
+    font-size:65px;
+    color:#FFD369;
+
+}
+
+.loader-box p{
+
+    margin-top:20px;
+    opacity:.8;
+
+}
+
+/* Hero */
+
+#hero{
+
+    position:relative;
+    width:100%;
+    height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    overflow:hidden;
+
+    background:
+    linear-gradient(180deg,#091327 0%,#040714 100%);
+
+}
+
+/* Fondo con estrellas */
+
+#stars{
+
+    position:absolute;
+    inset:0;
+
+    background-image:
+
+    radial-gradient(white 1px,transparent 1px),
+    radial-gradient(white 1px,transparent 1px),
+    radial-gradient(white 2px,transparent 2px);
+
+    background-size:
+    180px 180px,
+    260px 260px,
+    420px 420px;
+
+    animation:starsMove 120s linear infinite;
+
+    opacity:.7;
+
+}
+
+@keyframes starsMove{
+
+from{
+
+transform:translateY(0);
+
+}
+
+to{
+
+transform:translateY(-800px);
+
+}
+
+}
+
+.overlay{
+
+    position:absolute;
+    inset:0;
+
+    background:
+    radial-gradient(circle,#ffffff10 0%,transparent 60%);
+
+}
+
+/* Caja principal */
+
+.hero-content{
+
+    position:relative;
+
+    z-index:10;
+
+    width:90%;
+    max-width:820px;
+
+    padding:60px;
+
+    border-radius:30px;
+
+    text-align:center;
+
+    backdrop-filter:blur(15px);
+
+    background:rgba(255,255,255,.08);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    box-shadow:
+    0 20px 60px rgba(0,0,0,.45);
+
+}
+
+.hero-content h3{
+
+    color:#FFD369;
+
+    letter-spacing:5px;
+
+    margin-bottom:15px;
+
+}
+
+.hero-content h1{
+
+    font-family:'Great Vibes',cursive;
+
+    font-size:85px;
+
+    margin-bottom:10px;
+
+}
+
+.hero-content h2{
+
+    font-size:35px;
+
+    color:#ff9db5;
+
+    margin-bottom:30px;
+
+}
+
+.hero-content p{
+
+    font-size:20px;
+
+    line-height:1.9;
+
+    margin-top:10px;
+
+}
+
+/* Botón */
+
+button{
+
+    margin-top:40px;
+
+    border:none;
+
+    padding:18px 45px;
+
+    border-radius:60px;
+
+    cursor:pointer;
+
+    font-size:18px;
+
+    color:white;
+
+    background:linear-gradient(45deg,#ff4d6d,#ff7aa2);
+
+    transition:.35s;
+
+    box-shadow:0 0 35px rgba(255,77,109,.45);
+
+}
+
+button:hover{
+
+    transform:translateY(-5px) scale(1.05);
+
+    box-shadow:0 0 60px rgba(255,77,109,.8);
+
+}
+
+/* Secciones */
+
+.container{
+
+    width:90%;
+
+    max-width:1100px;
+
+    margin:auto;
+
+    padding:100px 0;
+
+}
+
+.container h2{
+
+    text-align:center;
+
+    font-size:45px;
+
+    margin-bottom:50px;
+
+}
+
+.hidden{
+
+    display:none;
+
+}
+
+
+
+/* ===================================
+   GALERÍA
+=================================== */
+
+#gallery{
+
+    min-height:100vh;
+
+    background:#071220;
+
+    padding-bottom:80px;
+
+}
+
+.grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+    gap:30px;
+
+}
+
+.card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    border-radius:25px;
+
+    cursor:pointer;
+
+    background:rgba(255,255,255,.06);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    transition:.4s;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.35);
+
+}
+
+.card:hover{
+
+    transform:translateY(-12px);
+
+    box-shadow:0 25px 60px rgba(255,105,180,.25);
+
+}
+
+.card img{
+
+    width:100%;
+
+    height:360px;
+
+    object-fit:cover;
+
+    display:block;
+
+    transition:.6s;
+
+}
+
+.card:hover img{
+
+    transform:scale(1.08);
+
+}
+
+.card::after{
+
+    content:"❤️";
+
+    position:absolute;
+
+    font-size:40px;
+
+    top:50%;
+
+    left:50%;
+
+    transform:translate(-50%,-50%) scale(0);
+
+    transition:.4s;
+
+    opacity:.9;
+
+}
+
+.card:hover::after{
+
+    transform:translate(-50%,-50%) scale(1);
+
+}
+
+
+/* ==========================
+      INTRO
+========================== */
+
+#intro{
+
+    background:#050d1d;
+
+}
+
+#intro p{
+
+    font-size:22px;
+
+    max-width:800px;
+
+    margin:auto;
+
+    line-height:2;
+
+    text-align:center;
+
+}
+
+
+/* ==========================
+      ANIMACIONES
+========================== */
+
+.fadeUp{
+
+    animation:fadeUp 1.2s ease;
+
+}
+
+@keyframes fadeUp{
+
+0%{
+
+opacity:0;
+
+transform:translateY(70px);
+
+}
+
+100%{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+
+/* ==========================
+      EFECTO BRILLO BOTÓN
+========================== */
+
+button{
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+button::before{
+
+content:"";
+
+position:absolute;
+
+top:0;
+
+left:-120%;
+
+width:80px;
+
+height:100%;
+
+background:rgba(255,255,255,.4);
+
+transform:skewX(-25deg);
+
+transition:.8s;
+
+}
+
+button:hover::before{
+
+left:140%;
+
+}
+
+
+/* ==========================
+      RESPONSIVE
+========================== */
+
+@media(max-width:900px){
+
+.hero-content{
+
+padding:40px;
+
+}
+
+.hero-content h1{
+
+font-size:60px;
+
+}
+
+.hero-content h2{
+
+font-size:28px;
+
+}
+
+.container h2{
+
+font-size:34px;
+
+}
+
+}
+
+@media(max-width:600px){
+
+.hero-content{
+
+padding:30px 22px;
+
+}
+
+.hero-content h1{
+
+font-size:48px;
+
+}
+
+.hero-content p{
+
+font-size:17px;
+
+}
+
+button{
+
+width:100%;
+
+}
+
+}
+
+
+
+
+/*====================================
+    CARRUSEL
+====================================*/
+
+.slider{
+
+width:100%;
+
+height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+gap:25px;
+
+}
+
+.slide{
+
+width:900px;
+
+max-width:90%;
+
+text-align:center;
+
+}
+
+.slide img{
+
+width:100%;
+
+height:600px;
+
+object-fit:cover;
+
+border-radius:25px;
+
+box-shadow:0 20px 60px rgba(0,0,0,.45);
+
+transition:.5s;
+
+}
+
+.caption{
+
+margin-top:35px;
+
+}
+
+.caption h2{
+
+font-size:40px;
+
+margin-bottom:20px;
+
+}
+
+.caption p{
+
+font-size:22px;
+
+line-height:1.8;
+
+max-width:850px;
+
+margin:auto;
+
+}
+
+#prev,
+#next{
+
+width:65px;
+
+height:65px;
+
+border-radius:50%;
+
+font-size:28px;
+
+padding:0;
+
+}
+
+/*====================================
+        CARTA
+====================================*/
+
+#letter{
+
+    min-height:100vh;
+
+    display:none;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:linear-gradient(180deg,#02040d,#09162b);
+
+    padding:80px 25px;
+
+}
+
+.letter-container{
+
+    width:95%;
+
+    max-width:900px;
+
+}
+
+.letter-container h1{
+
+    text-align:center;
+
+    margin-bottom:40px;
+
+    font-family:'Great Vibes',cursive;
+
+    font-size:70px;
+
+    color:#FFD369;
+
+}
+
+.letter-box{
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(18px);
+
+    border-radius:25px;
+
+    padding:50px;
+
+    border:1px solid rgba(255,255,255,.15);
+
+    box-shadow:0 20px 60px rgba(0,0,0,.45);
+
+}
+
+#typingText{
+
+    font-size:22px;
+
+    line-height:2;
+
+    white-space:pre-line;
+
+}
+
+
+/*====================================
+        TRANSICIÓN
+====================================*/
+
+#transition{
+
+    display:none;
+
+    justify-content:center;
+
+    align-items:center;
+
+    height:100vh;
+
+    background:#000;
+
+    text-align:center;
+
+}
+
+.heart-container{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+}
+
+.heart{
+
+    width:120px;
+
+    height:120px;
+
+    background:#ff3b6f;
+
+    transform:rotate(-45deg);
+
+    animation:pulse 1.2s infinite;
+
+    position:relative;
+
+}
+
+.heart::before,
+.heart::after{
+
+content:"";
+
+position:absolute;
+
+width:120px;
+
+height:120px;
+
+background:#ff3b6f;
+
+border-radius:50%;
+
+}
+
+.heart::before{
+
+top:-60px;
+left:0;
+
+}
+
+.heart::after{
+
+left:60px;
+top:0;
+
+}
+
+@keyframes pulse{
+
+0%{transform:rotate(-45deg) scale(1);}
+
+50%{transform:rotate(-45deg) scale(1.18);}
+
+100%{transform:rotate(-45deg) scale(1);}
+
+}
+
+.heart-container h2{
+
+margin-top:70px;
+
+font-size:35px;
+
+font-weight:400;
+
+color:white;
+
+}
+
+
+
+/*====================================
+        VIDEO
+====================================*/
+
+#videoSection{
+
+display:none;
+
+justify-content:center;
+
+align-items:center;
+
+min-height:100vh;
+
+padding:70px 20px;
+
+background:#050816;
+
+}
+
+.video-container{
+
+width:95%;
+
+max-width:1000px;
+
+text-align:center;
+
+}
+
+.video-container h1{
+
+font-family:'Great Vibes',cursive;
+
+font-size:70px;
+
+margin-bottom:40px;
+
+color:#FFD369;
+
+}
+
+.video-container video{
+
+width:100%;
+
+border-radius:25px;
+
+box-shadow:0 20px 60px rgba(0,0,0,.5);
+
+}
+
+
+/*==================================================
+        INTRO CINEMATOGRÁFICA
+==================================================*/
+
+#introMovie{
+
+    position:relative;
+
+    width:100%;
+
+    height:100vh;
+
+    overflow:hidden;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:linear-gradient(180deg,#02040d,#09162b);
+
+}
+
+.intro-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:rgba(0,0,0,.45);
+
+}
+
+.intro-content{
+
+    position:relative;
+
+    z-index:10;
+
+    width:90%;
+
+    max-width:900px;
+
+    text-align:center;
+
+}
+
+.intro-line{
+
+    opacity:0;
+
+    font-size:28px;
+
+    margin:20px 0;
+
+    animation:fadeLine 2s forwards;
+
+}
+
+.intro-line:nth-child(1){
+
+animation-delay:1s;
+
+}
+
+.intro-line:nth-child(2){
+
+animation-delay:4s;
+
+}
+
+.intro-line:nth-child(3){
+
+animation-delay:7s;
+
+}
+
+.intro-content h1{
+
+    margin-top:70px;
+
+    font-family:'Great Vibes',cursive;
+
+    font-size:90px;
+
+    color:#FFD369;
+
+    opacity:0;
+
+    animation:fadeTitle 2s forwards;
+
+    animation-delay:10s;
+
+}
+
+.intro-content h2{
+
+    margin-top:20px;
+
+    font-size:38px;
+
+    color:#ffb3c6;
+
+    opacity:0;
+
+    animation:fadeTitle 2s forwards;
+
+    animation-delay:11.5s;
+
+}
+
+#btnComenzar{
+
+    opacity:0;
+
+    margin-top:60px;
+
+    animation:fadeTitle 2s forwards;
+
+    animation-delay:13s;
+
+}
+
+@keyframes fadeLine{
+
+0%{
+
+opacity:0;
+
+transform:translateY(30px);
+
+}
+
+100%{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+@keyframes fadeTitle{
+
+from{
+
+opacity:0;
+
+transform:scale(.9);
+
+}
+
+to{
+
+opacity:1;
+
+transform:scale(1);
+
+}
+
+}
+
+
+
+/*==================================================
+        FONDO ESTRELLADO
+==================================================*/
+
+#stars{
+
+position:absolute;
+
+inset:0;
+
+background-image:
+
+radial-gradient(circle,#ffffff 1px,transparent 1px),
+
+radial-gradient(circle,#ffffff90 1px,transparent 1px),
+
+radial-gradient(circle,#FFD369 2px,transparent 2px);
+
+background-size:
+
+180px 180px,
+
+280px 280px,
+
+420px 420px;
+
+animation:starsMove 90s linear infinite;
+
+}
+
+@keyframes starsMove{
+
+from{
+
+transform:translateY(0);
+
+}
+
+to{
+
+transform:translateY(-900px);
+
+}
+
+}
+
+
+
+/*==================================================
+            BOTONES
+==================================================*/
+
+button{
+
+padding:18px 45px;
+
+border:none;
+
+border-radius:60px;
+
+cursor:pointer;
+
+font-size:18px;
+
+font-weight:600;
+
+background:linear-gradient(45deg,#ff4d6d,#ff8fab);
+
+color:white;
+
+transition:.35s;
+
+box-shadow:0 0 35px rgba(255,77,109,.4);
+
+}
+
+button:hover{
+
+transform:translateY(-6px);
+
+box-shadow:0 0 55px rgba(255,77,109,.8);
+
+}
+
+
+
+/*==================================================
+            SECCIONES
+==================================================*/
+
+.hidden{
+
+display:none;
+
+}
+
+section{
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+/*==================================================
+                SOBRE
+==================================================*/
+
+#envelopeSection{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:linear-gradient(180deg,#071220,#02040d);
+
+}
+
+.envelope-area{
+
+    text-align:center;
+
+}
+
+.envelope-area h2{
+
+    font-size:50px;
+
+    margin-bottom:20px;
+
+}
+
+.envelope-area p{
+
+    font-size:22px;
+
+    opacity:.8;
+
+    margin-bottom:40px;
+
+}
+
+#envelope{
+
+    width:260px;
+
+    height:170px;
+
+    margin:40px auto;
+
+    position:relative;
+
+    cursor:pointer;
+
+    transition:.6s;
+
+}
+
+/* Base del sobre */
+
+#envelope::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:#fff6e9;
+
+    border-radius:10px;
+
+    box-shadow:0 20px 45px rgba(0,0,0,.35);
+
+}
+
+/* Tapa */
+
+#envelope::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    right:0;
+
+    top:0;
+
+    margin:auto;
+
+    width:0;
+
+    height:0;
+
+    border-left:130px solid transparent;
+
+    border-right:130px solid transparent;
+
+    border-top:90px solid #f6d7b0;
+
+    transform-origin:top;
+
+    transition:.8s;
+
+}
+
+#envelope:hover{
+
+    transform:translateY(-12px);
+
+}
+
+#envelope.open::after{
+
+    transform:rotateX(180deg);
+
+}
+
+/*==================================================
+                CARTA
+==================================================*/
+
+#letterSection{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:#071220;
+
+    padding:80px 20px;
+
+}
+
+.letter{
+
+    width:90%;
+
+    max-width:900px;
+
+    background:white;
+
+    color:#333;
+
+    padding:60px;
+
+    border-radius:20px;
+
+    box-shadow:0 30px 80px rgba(0,0,0,.45);
+
+}
+
+.letter h1{
+
+    font-family:'Great Vibes',cursive;
+
+    font-size:65px;
+
+    text-align:center;
+
+    color:#c2185b;
+
+    margin-bottom:40px;
+
+}
+
+#typingText{
+
+    font-size:22px;
+
+    line-height:2;
+
+    white-space:pre-line;
+
+}
+
+/*==================================================
+                CORAZÓN
+==================================================*/
+
+.heart{
+
+    width:120px;
+
+    height:120px;
+
+    background:#ff3b6f;
+
+    transform:rotate(-45deg);
+
+    position:relative;
+
+    animation:pulse 1.2s infinite;
+
+}
+
+.heart::before,
+.heart::after{
+
+content:"";
+
+position:absolute;
+
+width:120px;
+
+height:120px;
+
+background:#ff3b6f;
+
+border-radius:50%;
+
+}
+
+.heart::before{
+
+top:-60px;
+
+left:0;
+
+}
+
+.heart::after{
+
+left:60px;
+
+top:0;
+
+}
+
+@keyframes pulse{
+
+0%{
+
+transform:rotate(-45deg) scale(1);
+
+}
+
+50%{
+
+transform:rotate(-45deg) scale(1.18);
+
+}
+
+100%{
+
+transform:rotate(-45deg) scale(1);
+
+}
+
+}
+
+/*==================================================
+                PÉTALOS
+==================================================*/
+
+.petal{
+
+    position:fixed;
+
+    top:-40px;
+
+    width:18px;
+
+    height:18px;
+
+    background:#ffb3c6;
+
+    border-radius:60% 40% 60% 40%;
+
+    opacity:.8;
+
+    pointer-events:none;
+
+    animation:fall linear forwards;
+
+}
+
+@keyframes fall{
+
+0%{
+
+transform:translateY(-30px) rotate(0deg);
+
+}
+
+100%{
+
+transform:translateY(110vh) rotate(720deg);
+
+}
+
+}
+
+
+
+
+/*==================================================
+                VIDEO
+==================================================*/
+
+#videoSection{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:80px 20px;
+
+    background:#02040d;
+
+}
+
+.video-wrapper{
+
+    width:95%;
+
+    max-width:1100px;
+
+    text-align:center;
+
+}
+
+.video-wrapper h1{
+
+    font-family:'Great Vibes',cursive;
+
+    font-size:70px;
+
+    color:#FFD369;
+
+    margin-bottom:40px;
+
+}
+
+#birthdayVideo{
+
+    width:100%;
+
+    border-radius:25px;
+
+    border:3px solid rgba(255,255,255,.12);
+
+    box-shadow:0 30px 80px rgba(0,0,0,.5);
+
+}
+
+
+
+/*==================================================
+                FINAL
+==================================================*/
+
+#finalSection{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:linear-gradient(180deg,#02040d,#071220);
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+#finalStars{
+
+    position:absolute;
+
+    inset:0;
+
+    background-image:
+
+    radial-gradient(circle,#ffffff 1px,transparent 1px),
+
+    radial-gradient(circle,#FFD369 2px,transparent 2px);
+
+    background-size:
+
+    180px 180px,
+
+    320px 320px;
+
+    animation:starsMove 90s linear infinite;
+
+    opacity:.7;
+
+}
+
+.finalOverlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:rgba(0,0,0,.45);
+
+}
+
+.finalContent{
+
+    position:relative;
+
+    z-index:10;
+
+    width:90%;
+
+    max-width:900px;
+
+    text-align:center;
+
+}
+
+.finalContent h1{
+
+    font-family:'Great Vibes',cursive;
+
+    font-size:85px;
+
+    color:#FFD369;
+
+    margin-bottom:40px;
+
+}
+
+.finalContent p{
+
+    font-size:24px;
+
+    margin:20px 0;
+
+    line-height:1.8;
+
+}
+
+.finalContent h2{
+
+    margin-top:50px;
+
+    font-size:55px;
+
+    color:#ff8fab;
+
+}
+
+.finalContent h3{
+
+    margin-top:20px;
+
+    font-size:40px;
+
+}
+
+.finalContent h4{
+
+    margin-top:50px;
+
+    font-size:28px;
+
+    font-weight:400;
+
+}
+
+.finalContent h5{
+
+    margin-top:15px;
+
+    font-family:'Great Vibes',cursive;
+
+    font-size:65px;
+
+    color:#FFD369;
+
+}
+
+#restartStory{
+
+    margin-top:60px;
+
+}
+
+
+
+/*==================================================
+            RESPONSIVE
+==================================================*/
+
+@media(max-width:900px){
+
+.intro-content h1{
+
+font-size:60px;
+
+}
+
+.video-wrapper h1{
+
+font-size:50px;
+
+}
+
+.finalContent h1{
+
+font-size:60px;
+
+}
+
+.finalContent h2{
+
+font-size:40px;
+
+}
+
+}
+
+@media(max-width:600px){
+
+.intro-line{
+
+font-size:20px;
+
+}
+
+.intro-content h1{
+
+font-size:45px;
+
+}
+
+.intro-content h2{
+
+font-size:28px;
+
+}
+
+.letter{
+
+padding:35px;
+
+}
+
+.letter h1{
+
+font-size:45px;
+
+}
+
+#typingText{
+
+font-size:18px;
+
+}
+
+.finalContent p{
+
+font-size:18px;
+
+}
+
+button{
+
+width:100%;
+
+}
+
+}
