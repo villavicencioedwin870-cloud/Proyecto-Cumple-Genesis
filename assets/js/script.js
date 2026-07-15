@@ -71,6 +71,18 @@ const imagenes = [
     "assets/fotos/foto12.jpg"
 ];
 
+/*====================================
+      PRECARGAR IMÁGENES
+====================================*/
+
+imagenes.forEach((ruta) => {
+
+    const img = new Image();
+
+    img.src = ruta;
+
+});
+
 const frases = [
 
 {
